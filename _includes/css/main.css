@@ -205,6 +205,18 @@ section.success {
     position: relative;
     margin: 0 auto;
     max-width: 400px;
+
+    /* === Square thumbnails — added === */
+    aspect-ratio: 1 / 1;   /* keep tile perfectly square */
+    overflow: hidden;       /* crop overflow */
+}
+
+#portfolio .portfolio-item .portfolio-link img {
+    /* === Ensure image fills/crops to square — added === */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* centered crop inside square */
+    display: block;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
@@ -218,7 +230,8 @@ section.success {
     transition: all ease .5s;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption:hover {
+/* Hover should trigger from the link (tile), not the caption — changed */
+#portfolio .portfolio-item .portfolio-link:hover .caption {
     opacity: 1;
 }
 
@@ -264,20 +277,20 @@ section.success {
       flex: 1 0 49%;
       max-width: 49%;
     }
-  }
-  @media (min-width: 960px) {
+}
+@media (min-width: 960px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
       flex: 1 0 32%;
       max-width: 32%;
     }
-  }
-  /* A large grid might need four columns on widescreen layouts */
-  /* @media (min-width: 1380px) {
+}
+/* A large grid might need four columns on widescreen layouts */
+/* @media (min-width: 1380px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
       flex: 1 0 23.5%;
       max-width: 23.5%;
     }
-  } */
+} */
 
 .btn-outline {
     margin-top: 15px;
@@ -429,7 +442,10 @@ footer .footer-below {
     font-size: 3em;
 }
 
+/* Keep modal images natural aspect ratio — expanded */
 .portfolio-modal .modal-content img {
+    width: 100%;
+    height: auto;
     margin-bottom: 30px;
 }
 
@@ -481,4 +497,115 @@ footer .footer-below {
 .modal.fade.in {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+}
+
+/* === Banner Header with Background Image === */
+.hero-header {
+  position: relative;
+  background: url("{{ '/img/bbb.jpg' | relative_url }}") no-repeat center center;
+  background-size: cover;
+  height: 70vh;                 /* slightly shorter than full screen */
+  min-height: 480px;            /* ensure it still looks good on smaller monitors */
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay for readability */
+.hero-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* Text styling */
+.hero-header .intro-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-header .intro-text .name {
+  display: block;
+  font-size: 5em;               /* larger main title */
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.hero-header .intro-text .skills {
+  display: block;
+  font-size: 1.2em;             /* smaller subtitle */
+  font-weight: 300;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+  .hero-header {
+    height: 60vh;
+  }
+  .hero-header .intro-text .name {
+    font-size: 3em;
+  }
+  .hero-header .intro-text .skills {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-header {
+    height: 50vh;
+  }
+  .hero-header .intro-text .name {
+    font-size: 2.2em;
+  }
+  .hero-header .intro-text .skills {
+    font-size: 0.9em;
+  }
+}
+
+
+/* === Compact About Section === */
+#about {
+  padding: 60px 0;  
+  color: #000;      
+  text-align: center;   /* was 100px in the base theme */
+}
+
+@media (max-width: 767px) {
+  #about {
+    padding: 45px 0;        /* smaller padding on mobile */
+  }
+}
+
+/* Officer captions under thumbnails */
+.officer-name {
+  margin: 10px 0 4px;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #000;
+}
+.officer-role {
+  margin: 0 0 6px;
+  font-size: 0.95em;
+  color: #555;
+}
+#portfolio .portfolio-item { text-align: center; }
+
+/* extra breathing room between name and title inside modals */
+.portfolio-modal .modal-content h2 {
+  margin-bottom: 12px;     /* add space below the name */
+}
+
+.portfolio-modal .modal-content .lead {
+  margin-top: 0;
+  margin-bottom: 20px;     /* more separation before the star divider */
+  font-weight: 500;
 }
