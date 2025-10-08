@@ -609,3 +609,60 @@ footer .footer-below {
   margin-bottom: 20px;     /* more separation before the star divider */
   font-weight: 500;
 }
+
+/* --- Initiatives layout --- */
+.subhero {
+  position: relative;
+  background: #f5f5f5;
+  color: #000;
+  padding: 56px 0;           /* shorter than full hero */
+  text-align: center;
+}
+.subhero.has-image {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.subhero .overlay {
+  display: none;
+}
+.subhero.has-image .overlay {
+  display: block;
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.35);
+}
+.subhero .container { position: relative; z-index: 1; }
+.subhero-title { margin: 0 0 6px; font-weight: 800; letter-spacing: 1px; }
+.subhero-subtitle { margin: 0 auto 10px; opacity: .95; }
+
+/* Page body */
+.page-section { background:#fff; color:#000; padding: 60px 0; text-align:center; }
+.page-section p { font-size: 18px; line-height: 1.6; }
+
+/* Cards */
+.initiatives-grid { margin-top: 20px; text-align: left; }
+.initiative-card {
+  background:#fff; border:1px solid #eee; border-radius:8px;
+  padding:18px; margin-bottom:22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  height: 100%;
+}
+.initiative-icon { font-size: 28px; margin-bottom: 8px; color:#000; }
+.initiative-title { margin-top: 0; font-size: 1.25em; font-weight:700; }
+.initiative-summary { color:#444; margin-bottom: 10px; }
+
+/* Dark star for light sections (you already use this pattern) */
+hr.star-dark {
+  margin: 25px auto 30px; max-width: 250px; border: 0; border-top: 5px solid #000;
+  text-align: center; overflow: visible;
+}
+hr.star-dark:after {
+  content: "\f005"; font-family: FontAwesome; position: relative; top: -0.8em;
+  padding: 0 .25em; font-size: 2em; color: #000; background: #fff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .page-section { padding: 45px 0; }
+  .subhero { padding: 40px 0; }
+}

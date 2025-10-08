@@ -1,7 +1,7 @@
 ---
-title: TBD?
+title: Austin Nguyen
 role: Graduate Student Recruitment Chair
-img: 
+img: austin.jpg
 description: >
   description here
 
