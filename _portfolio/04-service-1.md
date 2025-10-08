@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Diana Gomez
-role: President
-modal-id: 1
-img: diana.jpg
+title: Meron Zerihun Demissie
+role: Service Co-Chair
+img: meron.jpg
 alt: 
 description: >
   Insert description here

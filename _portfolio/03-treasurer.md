@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Diana Gomez
-role: President
-modal-id: 1
-img: diana.jpg
+title: Rayhan Rashed
+role: Treasurer
+img: rayrash.jpg
 alt: 
 description: >
   Insert description here
