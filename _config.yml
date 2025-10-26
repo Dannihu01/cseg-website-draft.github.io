@@ -1,12 +1,12 @@
 # Site settings
 title: CSEG
 email: your-email@domain.com
-url: "https://dannihu01.github.io"
-baseurl: "/cseg-website-draft.github.io"
+url: "https://cseg-michigan.github.io/"
+# baseurl: "/cseg-website-draft.github.io"
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 keywords: "your keywords, separated by commas"
 skills: "Computer Science & Engineering Graduate Students @ UMich"
-meta_author: LastName FirstName
+meta_author: Danniell Hu
 
 # Google webmaster tools
 google_verify:
