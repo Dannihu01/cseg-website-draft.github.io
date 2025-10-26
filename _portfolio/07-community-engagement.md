@@ -1,7 +1,8 @@
 ---
 title: Alvaro Vega Hidalgo
 role: Community Engagement Chair
-img: 
+img: alvaro.jpg
+modal-id: 7
 description: >
- Description here
+
 ---

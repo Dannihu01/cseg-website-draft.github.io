@@ -69,3 +69,6 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:name/
+  initiatives:
+    output: true        # gives each initiative its own page (optional)
+    permalink: /initiatives/:name/
